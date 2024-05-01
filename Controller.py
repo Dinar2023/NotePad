@@ -2,6 +2,7 @@ import Saver
 import View
 import Note
 import datetime
+import Reader
 
 def start ():
     notePad = [];
@@ -46,6 +47,9 @@ def start ():
         elif (choise == "save"):
             Saver.save_tofile(notePad)
             print("Сохранено в файл")
+        elif (choise == "read"):
+            notePad = Reader.read_file()
+            print("Чтение завершено")
         elif (choise == "1"):
             for item in notePad:
                 item.view()
